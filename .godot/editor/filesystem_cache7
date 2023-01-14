@@ -1,0 +1,10 @@
+0b7126e0c6e86d3ec295a72f5aa6e0bd
+::res://::1673723104
+icon.svg::CompressedTexture2D::4918904308290865421::1673712834::1673713013::1::::<><>::
+placeholder.png::CompressedTexture2D::4828848561319431753::1673716304::1673716317::1::::<><>::
+player.gd::GDScript::-1::1673716385::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::8878924722852164609::1673716385::0::1::::<><>::res://player.gd<>uid://ca2eovotfh6v2
+README.md::TextFile::-1::1673712834::0::1::::<><>::
+test_level001.tscn::PackedScene::278447013021769396::1673717071::0::1::::<><>::
+::res://Player/::1673723104
+player.tscn::PackedScene::8878924722852164609::1673723118::0::1::::<><>::res://player.gd<>uid://ca2eovotfh6v2
