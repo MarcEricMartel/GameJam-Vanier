@@ -1,3 +1,5 @@
+AudioStreamPlayer2D
+AudioListener2D
 TileMap
 CollisionShape2D
 AnimatedSprite2D
