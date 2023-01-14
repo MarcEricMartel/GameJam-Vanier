@@ -4,11 +4,16 @@ extends CharacterBody2D
 @export var ACCELERATION = 2000.0;
 @export var FRICTION = 3000.0;
 
+@onready var raycast = $RayCast2D;
+
 func _physics_process(delta):
 	var input_vector = get_input_vector();
 	apply_movement(input_vector, delta);
 	apply_friction(input_vector, delta);
 	move_and_slide();
+	
+	var look_vec = get_global_mouse_position() - global_position;
+	raycast.rotation = atan2(look_vec.y,look_vec.x);
 
 func get_input_vector():
 	var input_vector = Vector2.ZERO;

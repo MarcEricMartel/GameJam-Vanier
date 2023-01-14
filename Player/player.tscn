@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://b62h0w8gjm6tj"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_mbyc2"]
-[ext_resource type="Texture2D" uid="uid://ca2eovotfh6v2" path="res://placeholder.png" id="2_26hmp"]
+[ext_resource type="Texture2D" uid="uid://wkeakqjvu3gg" path="res://Sprites/dingo_jam_mc_front_64.png" id="2_ae25p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mqbrd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_26hmp")
+"texture": ExtResource("2_ae25p")
 }],
 "loop": true,
 "name": &"default",
@@ -25,3 +25,14 @@ frames = SubResource("SpriteFrames_mqbrd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ng5bv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(2000, 0)
+
+[node name="Line2D" type="Line2D" parent="RayCast2D"]
+points = PackedVector2Array(0, 0, 2000, 0)
+width = 5.0
+default_color = Color(1, 0, 0, 0.392157)
