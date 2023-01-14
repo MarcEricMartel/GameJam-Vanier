@@ -1,2 +1,4 @@
-res://Player/player.tscn
 res://test_level001.tscn
+res://Player/player.tscn
+res://Player/player.gd
+res://Player/Weapons/basic_weapon.tscn

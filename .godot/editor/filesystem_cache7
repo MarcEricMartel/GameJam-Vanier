@@ -1,13 +1,21 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1673728399
+::res://::1673734432
 icon.svg::CompressedTexture2D::4918904308290865421::1673712834::1673713013::1::::<><>::
 placeholder.png::CompressedTexture2D::4828848561319431753::1673716304::1673716317::1::::<><>::
 README.md::TextFile::-1::1673712834::0::1::::<><>::
-test_level001.tscn::PackedScene::278447013021769396::1673727256::0::1::::<><>::uid://b62h0w8gjm6tj
+test_level001.tscn::PackedScene::278447013021769396::1673733616::0::1::::<><>::uid://b62h0w8gjm6tj<>uid://brxelntunb27r
 ::res://Levels/::1673726687
 level.tscn::PackedScene::4739050375457527030::1673726687::0::1::::<><>::
-::res://Player/::1673727256
-player.gd::GDScript::-1::1673726441::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4618483906406103163::1673727256::0::1::::<><>::res://Player/player.gd<>uid://ca2eovotfh6v2
-::res://TileSets/::1673728399
+::res://Player/::1673733741
+player.gd::GDScript::-1::1673732770::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4618483906406103163::1673733616::0::1::::<><>::res://Player/player.gd<>uid://wkeakqjvu3gg
+::res://Player/Projectiles/::1673734122
+basic_projectile.tscn::PackedScene::5856608848916302392::1673734122::0::1::::<><>::
+::res://Player/Weapons/::1673734078
+basic_weapon.tscn::PackedScene::5655575360493827386::1673734078::0::1::::<><>::
+::res://Sprites/::1673734432
+dingo_jam_mc_front_64.png::CompressedTexture2D::1565041755936548690::1673732299::1673732300::1::::<><>::
+pew.png::CompressedTexture2D::7577871081029115281::1673734362::1673734427::1::::<><>::
+projectile.png::CompressedTexture2D::13383739614235193::1673734403::1673734432::1::::<><>::
+::res://TileSets/::1673728405
 Tiles Set GameJam.png::CompressedTexture2D::3627374938668034389::1673728399::1673728405::1::::<><>::
