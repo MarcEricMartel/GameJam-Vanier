@@ -24,3 +24,19 @@ func apply_movement(input_vector, delta):
 func apply_friction(input_vector,delta):
 	if(input_vector == Vector2.ZERO):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta);
+
+
+func _on_area_2d_area_entered(area):
+	$"../School_Snare".volume_db(-6);
+	$"../School_BDClave".volume_db(-6);
+	$"../School_Bass".volume_db(-6);
+	$"../School_Flute".volume_db(-6);
+	$"../School_Brass".volume_db(-6);
+
+
+func _on_area_2d_area_exited(area):
+	$"../School_Snare".volume_db(-80);
+	$"../School_BDClave".volume_db(-80);
+	$"../School_Bass".volume_db(-80);
+	$"../School_Flute".volume_db(-80);
+	$"../School_Brass".volume_db(-80);

@@ -1,1 +1,3 @@
 res://test_level001.tscn
+res://Player/player.gd
+res://Player/player.tscn
