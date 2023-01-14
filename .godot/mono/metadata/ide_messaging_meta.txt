@@ -1,2 +1,2 @@
-﻿1238
-C:/Godot_v4.0-beta12_mono_win64/Godot_v4.0-beta12_mono_win64/Godot_v4.0-beta12_mono_win64.exe
+﻿34493
+/usr/bin/godot4
