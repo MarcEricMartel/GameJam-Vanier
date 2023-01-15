@@ -24,11 +24,12 @@ text = "Start Game"
 flat = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 1473.0
-offset_top = 199.0
-offset_right = 1519.0
-offset_bottom = 225.0
+offset_left = 1318.0
+offset_top = 109.0
+offset_right = 1728.0
+offset_bottom = 310.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 145
 text = "ENVIE
 "
 

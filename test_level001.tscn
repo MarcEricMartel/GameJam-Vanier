@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3y4rna66nylu" path="res://TileSets/Tiles Set GameJam.png" id="2_xwre6"]
 [ext_resource type="PackedScene" uid="uid://bbg5x0apue0ei" path="res://PickableItems/pickable_t_shirt.tscn" id="4_5egyc"]
 [ext_resource type="PackedScene" uid="uid://degce2jvx3sli" path="res://PickableItems/pickable_shoes.tscn" id="5_4b36u"]
-[ext_resource type="PackedScene" uid="uid://p7aa6t787b3d" path="res://Enemies/urinal_mimic.tscn" id="5_sfqul"]
+[ext_resource type="PackedScene" path="res://Enemies/urinal_mimic.tscn" id="5_sfqul"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aemot"]
 resource_name = "Test"
