@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwrom0u0cj2yi"]
+[gd_scene load_steps=3 format=3 uid="uid://cgwf23texn2ur"]
 
 [ext_resource type="Script" path="res://YouWin.gd" id="1_ui55j"]
 [ext_resource type="Texture2D" uid="uid://dboun0ofe7h6f" path="res://Images/WIN_screen.png" id="2_b03md"]
@@ -8,9 +8,12 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ui55j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1901.0
 offset_bottom = 1146.0
 color = Color(0, 0, 0, 1)

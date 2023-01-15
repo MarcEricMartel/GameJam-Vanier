@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b8rvp5g0vj8q1"]
+[gd_scene load_steps=16 format=3 uid="uid://b8rvp5g0vj8q1"]
 
 [ext_resource type="TileSet" uid="uid://bi3tupdxmgcim" path="res://TileSets/tiles.tres" id="1_8igly"]
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_x3isi"]
@@ -10,12 +10,17 @@
 [ext_resource type="PackedScene" uid="uid://degce2jvx3sli" path="res://PickableItems/pickable_shoes.tscn" id="8_qnb3g"]
 [ext_resource type="PackedScene" uid="uid://2wpk5ocpyhbm" path="res://PickableItems/pickable_pants.tscn" id="9_8e12f"]
 [ext_resource type="PackedScene" uid="uid://p7aa6t787b3d" path="res://Enemies/urinal_mimic.tscn" id="10_8g8ng"]
+[ext_resource type="Texture2D" uid="uid://dxvv3luyq6b5k" path="res://Sprites/Cloud_1.png" id="11_uhf1x"]
+[ext_resource type="Texture2D" uid="uid://ih7pprd7ko1t" path="res://Sprites/Cloud_2.png" id="12_fsk5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jn25"]
 size = Vector2(85, 5534.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xvim"]
 size = Vector2(4186, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u153x"]
+size = Vector2(1359, 228)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_x3isi")
@@ -235,6 +240,106 @@ position = Vector2(3658, 4777)
 [node name="End_Enemy14" parent="." instance=ExtResource("7_qt4sv")]
 position = Vector2(3658, 4777)
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2631, 5269)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(416.5, -22)
+shape = SubResource("RectangleShape2D_u153x")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-83, 151)
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
+position = Vector2(169, 143)
+rotation = -0.208843
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Area2D"]
+position = Vector2(42, 48)
+rotation = 0.0879637
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Area2D"]
+position = Vector2(285, 44)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Area2D"]
+position = Vector2(532, 65)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Area2D"]
+position = Vector2(823, 62)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Area2D"]
+position = Vector2(990, 157)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Area2D"]
+position = Vector2(745, 168)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Area2D"]
+position = Vector2(529, 158)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Area2D"]
+position = Vector2(345, 155)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Area2D"]
+position = Vector2(-100, 42)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Area2D"]
+position = Vector2(402, -12)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Area2D"]
+position = Vector2(678, 12)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Area2D"]
+position = Vector2(964, 26)
+rotation = 0.0481666
+scale = Vector2(6.09021, 6.09021)
+texture = ExtResource("11_uhf1x")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Area2D"]
+position = Vector2(188, 25)
+scale = Vector2(5.03591, 5.03591)
+texture = ExtResource("12_fsk5q")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Area2D"]
+position = Vector2(291, 216)
+scale = Vector2(5.03591, 5.03591)
+texture = ExtResource("12_fsk5q")
+
 [connection signal="is_killed" from="Outside_Enemy" to="." method="_on_outside_enemy_is_killed"]
 [connection signal="picked" from="pickable_t_shirt" to="." method="_on_pickable_t_shirt_picked"]
 [connection signal="picked" from="shoes" to="." method="_on_shoes_picked"]
@@ -244,3 +349,4 @@ position = Vector2(3658, 4777)
 [connection signal="is_killed" from="Mimic_02" to="." method="_on_mimic_02_is_killed"]
 [connection signal="picked" from="pants" to="." method="_on_pants_picked"]
 [connection signal="is_killed" from="Gym_Enemy05" to="." method="_on_gym_enemy_05_is_killed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

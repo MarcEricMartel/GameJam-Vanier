@@ -49,3 +49,11 @@ func _on_gym_enemy_05_is_killed():
 	doors.remove_child($Doors/BackDoor_Left);
 	doors.remove_child($Doors/BackDoor_Right);
 	
+
+
+func _on_area_2d_body_entered(body):
+	if body.name == "Player":
+		win();
+		
+func win():
+	get_tree().change_scene_to_file("res://YouWin.tscn");
