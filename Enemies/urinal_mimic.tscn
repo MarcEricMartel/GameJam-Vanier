@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://p7aa6t787b3d"]
+
+[ext_resource type="Script" path="res://Enemies/urinal_mimic.gd" id="1_2ga4k"]
+[ext_resource type="Texture2D" uid="uid://clw15m8cxj22p" path="res://Sprites/Urinol.png" id="2_3n7wy"]
+[ext_resource type="Texture2D" uid="uid://t2d8ft40y5c0" path="res://Sprites/Urinol_MIMIC.png" id="3_fjxqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqcqj"]
+atlas = ExtResource("3_fjxqr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcf1j"]
+atlas = ExtResource("3_fjxqr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smam5"]
+atlas = ExtResource("3_fjxqr")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvcd5"]
+atlas = ExtResource("3_fjxqr")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyisr"]
+atlas = ExtResource("3_fjxqr")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r27p5"]
+atlas = ExtResource("3_fjxqr")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbor8"]
+atlas = ExtResource("3_fjxqr")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e70cb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3n7wy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqcqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcf1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smam5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvcd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyisr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r27p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbor8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jn4wv"]
+size = Vector2(23, 21)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0y76e"]
+radius = 120.037
+
+[node name="urinal_mimic" type="CharacterBody2D"]
+script = ExtResource("1_2ga4k")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(30, 0)
+
+[node name="Line2D" type="Line2D" parent="RayCast2D"]
+visible = false
+points = PackedVector2Array(0, 0, 30, 0)
+width = 4.0
+default_color = Color(0.752941, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 21)
+frames = SubResource("SpriteFrames_e70cb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_jn4wv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_0y76e")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
