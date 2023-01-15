@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://3n1o2mbywp8w"]
+
+[ext_resource type="Shader" path="res://hud.gdshader" id="1_0s6h4"]
+[ext_resource type="Script" path="res://hud.gd" id="1_jkk58"]
+[ext_resource type="Texture2D" uid="uid://b25de1d0yyuji" path="res://Images/Bladder.png" id="2_fa8jy"]
+[ext_resource type="Script" path="res://Bladder.gd" id="3_tb31y"]
+[ext_resource type="Texture2D" uid="uid://d2nqjxofehkum" path="res://Images/BladderHollow.png" id="4_lbxgy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gcor"]
+shader = ExtResource("1_0s6h4")
+shader_parameter/fill = 0.0
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 198.0
+offset_top = 205.0
+offset_right = 198.0
+offset_bottom = 205.0
+script = ExtResource("1_jkk58")
+
+[node name="Bladder" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_0gcor")
+scale = Vector2(4, 4)
+texture = ExtResource("2_fa8jy")
+script = ExtResource("3_tb31y")
+
+[node name="BladderHollow" type="Sprite2D" parent="."]
+position = Vector2(-2, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("4_lbxgy")
