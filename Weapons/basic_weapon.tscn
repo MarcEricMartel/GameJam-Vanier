@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmtuq84761y0i"]
+
+[ext_resource type="Script" path="res://Weapons/basic_weapon.gd" id="1_cser3"]
+[ext_resource type="Texture2D" uid="uid://df71outtqfcu0" path="res://Sprites/placeholder_weapon.png" id="1_k30lm"]
+[ext_resource type="PackedScene" uid="uid://cpo8qy3y0fuui" path="res://Projectiles/basic_projectile.tscn" id="2_fbg12"]
+
+[node name="basic_weapon" type="Node2D"]
+script = ExtResource("1_cser3")
+PROJECTILE = ExtResource("2_fbg12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("1_k30lm")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(44, 0)
+target_position = Vector2(50, 0)
+
+[node name="CooldownTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

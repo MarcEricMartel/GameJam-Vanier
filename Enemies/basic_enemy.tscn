@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c661br4lh30r8"]
+
+[ext_resource type="Script" path="res://Enemies/basic_enemy.gd" id="1_5vi5k"]
+[ext_resource type="Texture2D" uid="uid://ds4uvvrcxoay1" path="res://Sprites/placeholder_enemy.png" id="1_o8nfm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efc6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o8nfm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47nt3"]
+size = Vector2(41, 64)
+
+[node name="BasicEnemy" type="CharacterBody2D"]
+script = ExtResource("1_5vi5k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+frames = SubResource("SpriteFrames_efc6w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_47nt3")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(35, 0)
+
+[node name="Line2D" type="Line2D" parent="RayCast2D"]
+points = PackedVector2Array(0, 0, 35, 0)
+width = 5.0
+default_color = Color(1, 0, 0, 0.392157)
+
+[node name="CooldownTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b62h0w8gjm6tj"]
+[gd_scene load_steps=6 format=3 uid="uid://xev8p1td1icx"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_mbyc2"]
-[ext_resource type="Texture2D" uid="uid://wkeakqjvu3gg" path="res://Sprites/dingo_jam_mc_front_64.png" id="2_ae25p"]
+[ext_resource type="PackedScene" uid="uid://cmtuq84761y0i" path="res://Weapons/basic_weapon.tscn" id="2_bo475"]
+[ext_resource type="Texture2D" uid="uid://wkeakqjvu3gg" path="res://Sprites/placeholder_player.png" id="2_bqbmq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mqbrd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ae25p")
+"texture": ExtResource("2_bqbmq")
 }],
 "loop": true,
 "name": &"default",
@@ -15,10 +16,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ng5bv"]
-size = Vector2(64, 64)
+size = Vector2(40, 64)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_mbyc2")
+STARTING_WEAPON = ExtResource("2_bo475")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_mqbrd")
@@ -33,6 +35,7 @@ current = true
 target_position = Vector2(2000, 0)
 
 [node name="Line2D" type="Line2D" parent="RayCast2D"]
+visible = false
 points = PackedVector2Array(0, 0, 2000, 0)
 width = 5.0
 default_color = Color(1, 0, 0, 0.392157)

@@ -1,2 +1,9 @@
 res://test_level001.tscn
 res://Player/player.tscn
+res://Enemies/basic_enemy.tscn
+res://Weapons/basic_weapon.tscn
+res://Projectiles/basic_projectile.tscn
+res://Enemies/basic_enemy.gd
+res://Player/player.gd
+res://Weapons/basic_weapon.gd
+res://Projectiles/basic_projectile.gd

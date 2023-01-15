@@ -3,8 +3,16 @@ extends CharacterBody2D
 @export var MAX_SPEED = 600.0;
 @export var ACCELERATION = 2000.0;
 @export var FRICTION = 3000.0;
+@export var HP = 3;
+@export var STARTING_WEAPON : PackedScene;
 
 @onready var raycast = $RayCast2D;
+var current_weapon = null;
+
+func _ready():
+	call_deferred("call_set_player");
+	current_weapon = STARTING_WEAPON.instantiate();
+	raycast.add_child(current_weapon);
 
 func _physics_process(delta):
 	var input_vector = get_input_vector();
@@ -14,6 +22,21 @@ func _physics_process(delta):
 	
 	var look_vec = get_global_mouse_position() - global_position;
 	raycast.rotation = atan2(look_vec.y,look_vec.x);
+	
+	if Input.is_action_pressed("shoot"):
+		attack();
+
+
+func attack():
+	if current_weapon: current_weapon.fire();
+
+func take_damage(damage):
+	HP = HP - damage;
+	if HP <= 0:
+		kill();
+
+func kill():
+	get_tree().reload_current_scene();
 
 func get_input_vector():
 	var input_vector = Vector2.ZERO;
@@ -30,6 +53,8 @@ func apply_friction(input_vector,delta):
 	if(input_vector == Vector2.ZERO):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta);
 
+func call_set_player():
+	get_tree().call_group("enemies", "set_player",self);
 
 func _on_area_2d_area_entered(area):
 	$"../School_Snare".volume_db(-6);

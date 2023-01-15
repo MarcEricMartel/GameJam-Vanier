@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d748m0x7o1nc"]
+[gd_scene load_steps=6 format=3 uid="uid://d748m0x7o1nc"]
 
-[ext_resource type="PackedScene" uid="uid://b62h0w8gjm6tj" path="res://Player/player.tscn" id="1_51g8b"]
+[ext_resource type="PackedScene" uid="uid://xev8p1td1icx" path="res://Player/player.tscn" id="1_51g8b"]
 [ext_resource type="Texture2D" uid="uid://d3y4rna66nylu" path="res://TileSets/Tiles Set GameJam.png" id="2_xwre6"]
+[ext_resource type="PackedScene" uid="uid://c661br4lh30r8" path="res://Enemies/basic_enemy.tscn" id="3_e1d3p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aemot"]
 resource_name = "Test"
@@ -136,3 +137,6 @@ position = Vector2(67.9902, 68.8737)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(409, 497, 687, 497, 687, 367, 1681, 367, 1683, 639, 1967, 643, 1963, 85, 415, 85)
+
+[node name="BasicEnemy" parent="." instance=ExtResource("3_e1d3p")]
+position = Vector2(846, 494)

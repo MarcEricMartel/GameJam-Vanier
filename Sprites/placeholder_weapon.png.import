@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wkeakqjvu3gg"
-path="res://.godot/imported/dingo_jam_mc_front_64.png-601093cfabf1ebe5f72150684b2fcd7e.ctex"
+uid="uid://df71outtqfcu0"
+path="res://.godot/imported/placeholder_weapon.png-154a5d8679016d3a845bf640635bfcb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/dingo_jam_mc_front_64.png"
-dest_files=["res://.godot/imported/dingo_jam_mc_front_64.png-601093cfabf1ebe5f72150684b2fcd7e.ctex"]
+source_file="res://Sprites/placeholder_weapon.png"
+dest_files=["res://.godot/imported/placeholder_weapon.png-154a5d8679016d3a845bf640635bfcb2.ctex"]
 
 [params]
 

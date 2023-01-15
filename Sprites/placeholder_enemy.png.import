@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df71outtqfcu0"
-path="res://.godot/imported/pew.png-3aab10d741cd8f2cd98a8407fc89f0cc.ctex"
+uid="uid://ds4uvvrcxoay1"
+path="res://.godot/imported/placeholder_enemy.png-d631bd7922b121775dedcf976041c79a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/pew.png"
-dest_files=["res://.godot/imported/pew.png-3aab10d741cd8f2cd98a8407fc89f0cc.ctex"]
+source_file="res://Sprites/placeholder_enemy.png"
+dest_files=["res://.godot/imported/placeholder_enemy.png-d631bd7922b121775dedcf976041c79a.ctex"]
 
 [params]
 
