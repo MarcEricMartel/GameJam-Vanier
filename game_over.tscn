@@ -25,6 +25,7 @@ one_shot = true
 autostart = true
 
 [node name="Restart" type="Button" parent="."]
+visible = false
 offset_left = 1265.0
 offset_top = 352.0
 offset_right = 1718.0
@@ -34,6 +35,7 @@ text = "Restart
 "
 
 [node name="Quit" type="Button" parent="."]
+visible = false
 offset_left = 1359.0
 offset_top = 591.0
 offset_right = 1628.0
@@ -41,7 +43,7 @@ offset_bottom = 769.0
 theme_override_font_sizes/font_size = 124
 text = "Quit"
 
-[node name="Label" type="Label" parent="."]
+[node name="GOLbl" type="Label" parent="."]
 offset_left = 1103.0
 offset_top = 29.0
 offset_right = 1854.0
@@ -49,6 +51,21 @@ offset_bottom = 221.0
 theme_override_font_sizes/font_size = 138
 text = "Game Over"
 
+[node name="Itwasalladream" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="IWAaD" type="Label" parent="."]
+visible = false
+offset_left = 1282.0
+offset_top = 864.0
+offset_right = 1703.0
+offset_bottom = 930.0
+theme_override_font_sizes/font_size = 45
+text = "It was all a dream..."
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Itwasalladream" to="." method="_on_itwasalladream_timeout"]
