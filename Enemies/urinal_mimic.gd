@@ -43,6 +43,7 @@ func take_damage(damage):
 		kill();
 
 func kill():
+	emit_signal("is_killed");
 	queue_free();
 
 func set_player(p):
@@ -57,3 +58,5 @@ func _on_area_2d_body_entered(body):
 
 func _on_animated_sprite_2d_animation_finished():
 	attacking = true;
+
+signal is_killed()

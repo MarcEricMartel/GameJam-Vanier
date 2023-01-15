@@ -68,7 +68,7 @@ animations = [{
 size = Vector2(23, 21)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0y76e"]
-radius = 120.037
+radius = 216.0
 
 [node name="urinal_mimic" type="CharacterBody2D"]
 script = ExtResource("1_2ga4k")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8rvp5g0vj8q1"]
+[gd_scene load_steps=13 format=3 uid="uid://b8rvp5g0vj8q1"]
 
 [ext_resource type="TileSet" uid="uid://bi3tupdxmgcim" path="res://TileSets/tiles.tres" id="1_8igly"]
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_x3isi"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bbg5x0apue0ei" path="res://PickableItems/pickable_t_shirt.tscn" id="5_kahe8"]
 [ext_resource type="PackedScene" uid="uid://c661br4lh30r8" path="res://Enemies/basic_enemy.tscn" id="7_qt4sv"]
 [ext_resource type="PackedScene" uid="uid://degce2jvx3sli" path="res://PickableItems/pickable_shoes.tscn" id="8_qnb3g"]
+[ext_resource type="PackedScene" uid="uid://2wpk5ocpyhbm" path="res://PickableItems/pickable_pants.tscn" id="9_8e12f"]
+[ext_resource type="PackedScene" uid="uid://p7aa6t787b3d" path="res://Enemies/urinal_mimic.tscn" id="10_8g8ng"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jn25"]
 size = Vector2(85, 5534.75)
@@ -77,6 +79,11 @@ shape = SubResource("RectangleShape2D_5xvim")
 position = Vector2(2906, 758)
 scale = Vector2(4.47547, 4.07547)
 
+[node name="MiddleDoor" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(3067, 1724)
+rotation = 0.163856
+scale = Vector2(10.6234, 9.67391)
+
 [node name="FrontDoor_Right" parent="Doors" instance=ExtResource("4_oukel")]
 position = Vector2(3239, 762)
 rotation = -3.14159
@@ -121,10 +128,6 @@ position = Vector2(3239, 4090)
 rotation = -3.14159
 scale = Vector2(4.47547, 4.07547)
 
-[node name="pickable_t_shirt" parent="." instance=ExtResource("5_kahe8")]
-position = Vector2(3586, 650)
-rotation = 0.286545
-
 [node name="Outside_Enemy" parent="." instance=ExtResource("7_qt4sv")]
 position = Vector2(3939, 657)
 
@@ -137,9 +140,107 @@ position = Vector2(2310, 1138)
 [node name="Class_Enemy03" parent="." instance=ExtResource("7_qt4sv")]
 position = Vector2(2367, 1350)
 
-[node name="shoes" parent="." instance=ExtResource("8_qnb3g")]
-position = Vector2(2595, 969)
+[node name="pickable_t_shirt" parent="." instance=ExtResource("5_kahe8")]
+position = Vector2(3592, 679)
 
-[connection signal="picked" from="pickable_t_shirt" to="." method="_on_pickable_t_shirt_picked"]
+[node name="shoes" parent="." instance=ExtResource("8_qnb3g")]
+position = Vector2(2606, 954)
+
+[node name="Mimic_01" parent="." instance=ExtResource("10_8g8ng")]
+position = Vector2(3686, 1379)
+
+[node name="Mimic_03" parent="." instance=ExtResource("10_8g8ng")]
+position = Vector2(3753, 2076)
+rotation = 3.14159
+
+[node name="Mimic_04" parent="." instance=ExtResource("10_8g8ng")]
+position = Vector2(3688, 2076)
+rotation = 3.14159
+
+[node name="Mimic_02" parent="." instance=ExtResource("10_8g8ng")]
+position = Vector2(3750, 1379)
+
+[node name="pants" parent="." instance=ExtResource("9_8e12f")]
+position = Vector2(2267, 2783)
+
+[node name="Gym_Enemy01" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(4028, 3202)
+
+[node name="Gym_Enemy02" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3885, 3027)
+
+[node name="Gym_Enemy03" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3783, 3449)
+
+[node name="Gym_Enemy04" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3824, 3176)
+
+[node name="Gym_Enemy05" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3970, 3468)
+
+[node name="Cafeteria_Enemye01" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2194, 2563)
+
+[node name="Cafeteria_Enemye02" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2305, 2671)
+
+[node name="Cafeteria_Enemye03" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2188, 2790)
+
+[node name="Cafeteria_Enemye04" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2386, 2818)
+
+[node name="Cafeteria_Enemye05" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2433, 2624)
+
+[node name="End_Enemy01" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2771, 4556)
+
+[node name="End_Enemy02" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3085, 4534)
+
+[node name="End_Enemy03" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3354, 4502)
+
+[node name="End_Enemy04" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3614, 4614)
+
+[node name="End_Enemy05" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2606, 4735)
+
+[node name="End_Enemy06" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3026, 4915)
+
+[node name="End_Enemy07" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3340, 4731)
+
+[node name="End_Enemy08" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2406, 4753)
+
+[node name="End_Enemy09" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2460, 4461)
+
+[node name="End_Enemy10" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3021, 4524)
+
+[node name="End_Enemy11" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3609, 4539)
+
+[node name="End_Enemy12" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(4013, 4530)
+
+[node name="End_Enemy13" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3658, 4777)
+
+[node name="End_Enemy14" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3658, 4777)
+
 [connection signal="is_killed" from="Outside_Enemy" to="." method="_on_outside_enemy_is_killed"]
+[connection signal="picked" from="pickable_t_shirt" to="." method="_on_pickable_t_shirt_picked"]
 [connection signal="picked" from="shoes" to="." method="_on_shoes_picked"]
+[connection signal="is_killed" from="Mimic_01" to="." method="_on_mimic_01_is_killed"]
+[connection signal="is_killed" from="Mimic_03" to="." method="_on_mimic_03_is_killed"]
+[connection signal="is_killed" from="Mimic_04" to="." method="_on_mimic_04_is_killed"]
+[connection signal="is_killed" from="Mimic_02" to="." method="_on_mimic_02_is_killed"]
+[connection signal="picked" from="pants" to="." method="_on_pants_picked"]
+[connection signal="is_killed" from="Gym_Enemy05" to="." method="_on_gym_enemy_05_is_killed"]

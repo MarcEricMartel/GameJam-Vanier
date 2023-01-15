@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://7ui1rkwaycfy"]
+
+[ext_resource type="PackedScene" uid="uid://cmtuq84761y0i" path="res://Weapons/basic_weapon.tscn" id="1_4irix"]
+[ext_resource type="PackedScene" uid="uid://ce4dfmw1o5whm" path="res://Projectiles/feather.tscn" id="2_ym5xc"]
+[ext_resource type="Texture2D" uid="uid://csw7kmwrrfyrr" path="res://Sprites/Pillow.png" id="3_ltgsm"]
+
+[node name="pillow" instance=ExtResource("1_4irix")]
+PROJECTILE = ExtResource("2_ym5xc")
+COOLDOWN = 0.1
+SPREAD = 0.5
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(59, 19)
+scale = Vector2(1.25134, 1.25134)
+texture = ExtResource("3_ltgsm")
+
+[node name="RayCast2D" parent="." index="1"]
+position = Vector2(59, 0)

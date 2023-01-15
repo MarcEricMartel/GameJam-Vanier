@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce4dfmw1o5whm"]
+
+[ext_resource type="PackedScene" uid="uid://cpo8qy3y0fuui" path="res://Projectiles/basic_projectile.tscn" id="1_5vj07"]
+[ext_resource type="Texture2D" uid="uid://lpdurm1dcsee" path="res://Sprites/Feather_5.png" id="2_vv5rv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjo1e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vv5rv")
+}],
+"loop": true,
+"name": &"explosion",
+"speed": 5.0
+}]
+
+[node name="basic_projectile" instance=ExtResource("1_5vj07")]
+DAMAGE = 25
+SPEED = 1000
+LIFETIME = 0.5
+HANG_TIME = 0.2
+FRICTION = 2000.0
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(4, 41)
+rotation = 0.827489
+scale = Vector2(1.26545, 1.26545)
+frames = SubResource("SpriteFrames_cjo1e")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(8, 0)
