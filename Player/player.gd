@@ -58,6 +58,14 @@ func pickup(item):
 			if !weapons[n]:
 				weapons[n] = item.Item.instantiate();
 				change_weapon(n);
+				
+				if n == 0 :
+					sprite.play("shirt");
+				if n == 1 :
+					sprite.play("pants");
+				if n == 2 :
+					sprite.play("shoes");
+				
 				return;
 
 func kill():

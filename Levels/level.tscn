@@ -149,7 +149,7 @@ position = Vector2(2367, 1350)
 position = Vector2(3592, 679)
 
 [node name="shoes" parent="." instance=ExtResource("8_qnb3g")]
-position = Vector2(2606, 954)
+position = Vector2(2281, 2786)
 
 [node name="Mimic_01" parent="." instance=ExtResource("10_8g8ng")]
 position = Vector2(3686, 1379)
@@ -166,7 +166,7 @@ rotation = 3.14159
 position = Vector2(3750, 1379)
 
 [node name="pants" parent="." instance=ExtResource("9_8e12f")]
-position = Vector2(2267, 2783)
+position = Vector2(2610, 955)
 
 [node name="Gym_Enemy01" parent="." instance=ExtResource("7_qt4sv")]
 position = Vector2(4028, 3202)
@@ -196,7 +196,7 @@ position = Vector2(2188, 2790)
 position = Vector2(2386, 2818)
 
 [node name="Cafeteria_Enemye05" parent="." instance=ExtResource("7_qt4sv")]
-position = Vector2(2433, 2624)
+position = Vector2(2455, 2599)
 
 [node name="End_Enemy01" parent="." instance=ExtResource("7_qt4sv")]
 position = Vector2(2771, 4556)

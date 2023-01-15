@@ -15,7 +15,6 @@ animations = [{
 }]
 
 [node name="basic_projectile" instance=ExtResource("1_5vj07")]
-DAMAGE = 25
 SPEED = 1000
 LIFETIME = 0.5
 HANG_TIME = 0.2
