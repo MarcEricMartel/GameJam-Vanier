@@ -7,7 +7,7 @@
 script = ExtResource("1_exncb")
 
 [node name="MainMenu" type="Sprite2D" parent="."]
-position = Vector2(946, 826)
+position = Vector2(957, 824)
 scale = Vector2(15, 15)
 texture = ExtResource("1_65g7h")
 
