@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://chf2kww8i3xsd"]
+
+[ext_resource type="PackedScene" uid="uid://cpo8qy3y0fuui" path="res://Projectiles/basic_projectile.tscn" id="1_g01wn"]
+[ext_resource type="Texture2D" uid="uid://cdrdrffc2b8al" path="res://Sprites/bullet_Shirt_1.png" id="2_quwts"]
+[ext_resource type="Texture2D" uid="uid://ded2ewso7kejt" path="res://Sprites/bullet_Shirt_2.png" id="3_wboqr"]
+[ext_resource type="Texture2D" uid="uid://c378cpgsik5a1" path="res://Sprites/bullet_Shirt_3.png" id="4_rm1tq"]
+[ext_resource type="Texture2D" uid="uid://bnbsl6mg0b8oc" path="res://Sprites/smolshirt.png" id="5_3gdki"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_se0yf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_quwts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rm1tq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wboqr")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_3gdki")
+}],
+"loop": true,
+"name": &"explosion",
+"speed": 5.0
+}]
+
+[node name="basic_projectile" instance=ExtResource("1_g01wn")]
+DAMAGE = 34
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(47, 51)
+scale = Vector2(2, 2)
+frames = SubResource("SpriteFrames_se0yf")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(1, 0)

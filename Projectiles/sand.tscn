@@ -1,13 +1,75 @@
-[gd_scene load_steps=2 format=3 uid="uid://bedh0enwukdbf"]
+[gd_scene load_steps=11 format=3 uid="uid://bedh0enwukdbf"]
 
 [ext_resource type="PackedScene" uid="uid://cpo8qy3y0fuui" path="res://Projectiles/basic_projectile.tscn" id="1_mqpki"]
+[ext_resource type="Texture2D" uid="uid://2xd84hbj47vd" path="res://Sprites/sand_sprite.png" id="2_gbmp0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmv27"]
+atlas = ExtResource("2_gbmp0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3crfb"]
+atlas = ExtResource("2_gbmp0")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn4yo"]
+atlas = ExtResource("2_gbmp0")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_besyq"]
+atlas = ExtResource("2_gbmp0")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gefy0"]
+atlas = ExtResource("2_gbmp0")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x03j6"]
+atlas = ExtResource("2_gbmp0")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh7me"]
+atlas = ExtResource("2_gbmp0")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_frbfh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmv27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3crfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn4yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_besyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gefy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x03j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh7me")
+}],
+"loop": true,
+"name": &"explosion",
+"speed": 24.0
+}]
 
 [node name="basic_projectile" instance=ExtResource("1_mqpki")]
-DAMAGE = 1
+DAMAGE = 2
 SPEED = 1000
 LIFETIME = 0.1
 HANG_TIME = 0.3
 FRICTION = 0.92
+SIZE_MOD = 0.15
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(2.43502, 2.43502)
+position = Vector2(-14, -13)
+rotation = -3.14159
+scale = Vector2(0.612389, 0.612389)
+frames = SubResource("SpriteFrames_frbfh")
