@@ -9,4 +9,7 @@ func _on_body_entered(body):
 
 func pickup_routine(player):
 	player.pickup(self);
+	emit_signal("picked");
 	queue_free();
+
+signal picked();

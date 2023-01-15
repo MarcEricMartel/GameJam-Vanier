@@ -5,19 +5,21 @@ extends CharacterBody2D
 @export var FRICTION = 1500.0;
 @export var HP = 100;
 @export var DAMAGE = 10;
-@export var COOLDOWN = 2;
+@export var COOLDOWN = 1;
 
 @onready var raycast = $RayCast2D;
 @onready var cooldown_timer = $CooldownTimer;
+@onready var sprite = $AnimatedSprite2D;
 
 var player = null;
 var is_on_cooldown = false;
+var attacking = false;
 
 func _ready():
 	add_to_group("enemies");
 
 func _physics_process(delta):
-	if player == null:
+	if player == null || !attacking:
 		return
 	
 	var vec_to_player = player.global_position - global_position;
@@ -43,6 +45,7 @@ func take_damage(damage):
 		kill();
 
 func kill():
+	emit_signal("is_killed");
 	queue_free();
 
 func set_player(p):
@@ -50,3 +53,9 @@ func set_player(p):
 
 func _on_cooldown_timer_timeout():
 	is_on_cooldown = false;
+
+func _on_area_2d_body_entered(body):
+	if body.name == "Player":
+		attacking = true;
+
+signal is_killed()

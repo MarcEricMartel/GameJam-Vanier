@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8rvp5g0vj8q1"]
+[gd_scene load_steps=11 format=3 uid="uid://b8rvp5g0vj8q1"]
 
 [ext_resource type="TileSet" uid="uid://bi3tupdxmgcim" path="res://TileSets/tiles.tres" id="1_8igly"]
+[ext_resource type="Script" path="res://Levels/level.gd" id="1_x3isi"]
 [ext_resource type="PackedScene" uid="uid://xev8p1td1icx" path="res://Player/player.tscn" id="2_raadk"]
 [ext_resource type="AudioStream" uid="uid://dhuxf2eklsha5" path="res://Music/school.ogg" id="3_rnkol"]
+[ext_resource type="PackedScene" uid="uid://chhokm3rf6pd3" path="res://OTHERS/door.tscn" id="4_oukel"]
+[ext_resource type="PackedScene" uid="uid://bbg5x0apue0ei" path="res://PickableItems/pickable_t_shirt.tscn" id="5_kahe8"]
+[ext_resource type="PackedScene" uid="uid://c661br4lh30r8" path="res://Enemies/basic_enemy.tscn" id="7_qt4sv"]
+[ext_resource type="PackedScene" uid="uid://degce2jvx3sli" path="res://PickableItems/pickable_shoes.tscn" id="8_qnb3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jn25"]
+size = Vector2(85, 5534.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xvim"]
+size = Vector2(4186, 55)
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_x3isi")
 
 [node name="Floor1" type="TileMap" parent="."]
 tile_set = ExtResource("1_8igly")
@@ -37,3 +49,97 @@ position = Vector2(3075, 488)
 stream = ExtResource("3_rnkol")
 volume_db = -6.0
 autoplay = true
+
+[node name="Outside_Wall" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Outside_Wall"]
+position = Vector2(1029, 0)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Outside_Wall/StaticBody2D"]
+position = Vector2(4094.5, 2720.63)
+shape = SubResource("RectangleShape2D_8jn25")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Outside_Wall/StaticBody2D"]
+position = Vector2(0, 2770)
+shape = SubResource("RectangleShape2D_8jn25")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Outside_Wall/StaticBody2D"]
+position = Vector2(2023, -0.5)
+shape = SubResource("RectangleShape2D_5xvim")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Outside_Wall/StaticBody2D"]
+position = Vector2(2023, 5393)
+shape = SubResource("RectangleShape2D_5xvim")
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="FrontDoor_Left" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(2906, 758)
+scale = Vector2(4.47547, 4.07547)
+
+[node name="FrontDoor_Right" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(3239, 762)
+rotation = -3.14159
+scale = Vector2(4.47547, 4.07547)
+
+[node name="ClassDoor" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(2763, 1339)
+rotation = 1.57079
+scale = Vector2(3.57152, 3.25231)
+
+[node name="Bathroom_Top" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(3368, 1473)
+rotation = 1.57079
+scale = Vector2(3.57152, 3.25231)
+
+[node name="Bathroom_Bottom" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(3368, 1984)
+rotation = 4.71238
+scale = Vector2(3.57152, 3.25231)
+
+[node name="Cafeteria" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(2763, 2436)
+rotation = 4.71238
+scale = Vector2(3.57152, 3.25231)
+
+[node name="Locker" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(3388, 2494)
+rotation = 4.71238
+scale = Vector2(3.57152, 3.25231)
+
+[node name="Gym" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(3388, 3579)
+rotation = 4.71238
+scale = Vector2(3.57152, 3.25231)
+
+[node name="BackDoor_Left" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(2906, 4086)
+scale = Vector2(4.47547, 4.07547)
+
+[node name="BackDoor_Right" parent="Doors" instance=ExtResource("4_oukel")]
+position = Vector2(3239, 4090)
+rotation = -3.14159
+scale = Vector2(4.47547, 4.07547)
+
+[node name="pickable_t_shirt" parent="." instance=ExtResource("5_kahe8")]
+position = Vector2(3586, 650)
+rotation = 0.286545
+
+[node name="Outside_Enemy" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(3939, 657)
+
+[node name="Class_Enemy01" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2248, 1257)
+
+[node name="Class_Enemy02" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2310, 1138)
+
+[node name="Class_Enemy03" parent="." instance=ExtResource("7_qt4sv")]
+position = Vector2(2367, 1350)
+
+[node name="shoes" parent="." instance=ExtResource("8_qnb3g")]
+position = Vector2(2595, 969)
+
+[connection signal="picked" from="pickable_t_shirt" to="." method="_on_pickable_t_shirt_picked"]
+[connection signal="is_killed" from="Outside_Enemy" to="." method="_on_outside_enemy_is_killed"]
+[connection signal="picked" from="shoes" to="." method="_on_shoes_picked"]

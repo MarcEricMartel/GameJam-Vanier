@@ -6,6 +6,10 @@ extends CharacterBody2D
 @export var HP = 100;
 
 @onready var raycast = $RayCast2D;
+@onready var sprite = $AnimatedSprite2D;
+
+var animation_count = 0;
+
 var current_weapon = null;
 var weapons = [null,null,null];
 
@@ -40,9 +44,11 @@ func attack():
 		current_weapon.fire(velocity);
 
 func take_damage(damage):
-	HP = HP - damage;
-	if HP <= 0:
-		kill();
+	if sprite.animation != "damage":
+		HP = HP - damage;
+		sprite.play("damage");
+		if HP <= 0:
+			kill();
 
 func pickup(item):
 	if item.Type == "weapon":
@@ -87,3 +93,11 @@ func _on_area_2d_area_exited(area):
 	$"../School_Bass".volume_db(-80);
 	$"../School_Flute".volume_db(-80);
 	$"../School_Brass".volume_db(-80);
+
+
+func _on_animated_sprite_2d_animation_finished():
+	if sprite.animation == "damage":
+		animation_count+=1;
+		if animation_count > 3:
+			animation_count = 0;
+			sprite.play("default");

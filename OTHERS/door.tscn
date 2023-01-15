@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://chhokm3rf6pd3"]
+
+[ext_resource type="Texture2D" uid="uid://q82l3e6t4whv" path="res://Sprites/HAHAHAs.png" id="1_6fehd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76cdb"]
+size = Vector2(63, 7)
+
+[node name="Door" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 6)
+scale = Vector2(0.279902, 0.279902)
+texture = ExtResource("1_6fehd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-8, 3)
+rotation = 0.0752773
+scale = Vector2(0.245176, 0.245176)
+texture = ExtResource("1_6fehd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(14, 11)
+rotation = -0.215964
+scale = Vector2(0.222094, 0.310601)
+texture = ExtResource("1_6fehd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_76cdb")
