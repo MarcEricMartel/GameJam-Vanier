@@ -1,17 +1,20 @@
 extends CharacterBody2D
 
-@export var MAX_SPEED = 600.0;
+@export var MAX_SPEED = 400.0;
 @export var ACCELERATION = 2000.0;
 @export var FRICTION = 3000.0;
-@export var HP = 3;
+@export var HP = 100;
 @export var STARTING_WEAPON : PackedScene;
 
 @onready var raycast = $RayCast2D;
 var current_weapon = null;
+var weapons = [null,null,null];
 
 func _ready():
 	call_deferred("call_set_player");
-	current_weapon = STARTING_WEAPON.instantiate();
+	weapons[0] = STARTING_WEAPON.instantiate();
+	weapons[1] = load("res://Weapons/shotgun.tscn").instantiate();
+	current_weapon = weapons[0];
 	raycast.add_child(current_weapon);
 
 func _physics_process(delta):
@@ -25,10 +28,20 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("shoot"):
 		attack();
+	
+	if Input.is_action_just_pressed("weapon_01"):change_weapon(0);
+	if Input.is_action_just_pressed("weapon_02"):change_weapon(1);
+	if Input.is_action_just_pressed("weapon_03"):change_weapon(2);
+	
 
+func change_weapon(position):
+	if weapons[position]:
+		raycast.remove_child(current_weapon);
+		current_weapon = weapons[position];
+		raycast.add_child(current_weapon);
 
 func attack():
-	if current_weapon: current_weapon.fire();
+	if current_weapon: current_weapon.fire(velocity);
 
 func take_damage(damage):
 	HP = HP - damage;

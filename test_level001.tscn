@@ -139,4 +139,22 @@ position = Vector2(67.9902, 68.8737)
 polygon = PackedVector2Array(409, 497, 687, 497, 687, 367, 1681, 367, 1683, 639, 1967, 643, 1963, 85, 415, 85)
 
 [node name="BasicEnemy" parent="." instance=ExtResource("3_e1d3p")]
-position = Vector2(846, 494)
+position = Vector2(843, 709)
+
+[node name="BasicEnemy2" parent="." instance=ExtResource("3_e1d3p")]
+position = Vector2(1555, 856)
+
+[node name="BasicEnemy3" parent="." instance=ExtResource("3_e1d3p")]
+position = Vector2(1034, 520)
+
+[node name="BasicEnemy4" parent="." instance=ExtResource("3_e1d3p")]
+position = Vector2(774, -108)
+
+[node name="BasicEnemy5" parent="." instance=ExtResource("3_e1d3p")]
+position = Vector2(1383, -193)
+
+[node name="BasicEnemy6" parent="." instance=ExtResource("3_e1d3p")]
+position = Vector2(948, 660)
+
+[node name="BasicEnemy7" parent="." instance=ExtResource("3_e1d3p")]
+position = Vector2(1322, 618)

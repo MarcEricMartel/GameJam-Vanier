@@ -1,6 +1,5 @@
-res://Projectiles/basic_projectile.gd
-res://Projectiles/basic_projectile.tscn
+res://Weapons/shotgun.tscn
 res://test_level001.tscn
 res://Enemies/basic_enemy.tscn
 res://Player/player.tscn
-res://Weapons/basic_weapon.tscn
+res://Weapons/basic_weapon.gd

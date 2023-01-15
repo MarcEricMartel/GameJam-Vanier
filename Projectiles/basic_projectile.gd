@@ -1,8 +1,8 @@
 extends Area2D
 
-@export var DAMAGE = 1;
-@export var SPEED = 800;
-@export var LIFETIME = 3;
+@export var DAMAGE = 10;
+@export var SPEED = 700;
+@export var LIFETIME = 1;
 
 @onready var life_timer = $LifeTimer;
 
@@ -12,14 +12,19 @@ func _process(delta):
 	if velocity != Vector2.ZERO:
 		transform.origin += velocity * delta;
 
-func launch(direction):
+func launch(direction, based_velocity):
 	life_timer.start(LIFETIME);
-	velocity = direction * SPEED;
+	velocity = based_velocity + direction * SPEED;
 
 func _on_life_timer_timeout():
 	queue_free();
 
-
 func _on_body_entered(body):
-	if body.is_in_group("enemies"):
-		body.take_damage(DAMAGE);
+	if body.name != "Player":
+		if body.is_in_group("enemies"):
+			body.take_damage(DAMAGE);
+		explode();
+
+func explode():
+	#animation and stuff 
+	queue_free();

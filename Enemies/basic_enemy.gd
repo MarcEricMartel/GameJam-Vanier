@@ -3,9 +3,9 @@ extends CharacterBody2D
 @export var MAX_SPEED = 300.0;
 @export var ACCELERATION = 1000.0;
 @export var FRICTION = 1500.0;
-@export var HP = 1;
-@export var DAMAGE = 1;
-@export var COOLDOWN = 1;
+@export var HP = 20;
+@export var DAMAGE = 34;
+@export var COOLDOWN = 2;
 
 @onready var raycast = $RayCast2D;
 @onready var cooldown_timer = $CooldownTimer;
