@@ -7,6 +7,7 @@ extends CharacterBody2D
 
 @onready var raycast = $RayCast2D;
 @onready var sprite = $AnimatedSprite2D;
+@onready var bladderUI = $Bladder;
 
 var animation_count = 0;
 
@@ -47,6 +48,7 @@ func take_damage(damage):
 	if sprite.animation != "damage":
 		HP = HP - damage;
 		sprite.play("damage");
+		bladderUI.material.set("fill",clamp((100.0 - HP) / 100.0, 0.0, 1.0));
 		if HP <= 0:
 			kill();
 
@@ -59,7 +61,7 @@ func pickup(item):
 				return;
 
 func kill():
-	get_tree().reload_current_scene();
+	get_tree().change_scene_to_file("res://game_over.tscn");
 
 func get_input_vector():
 	var input_vector = Vector2.ZERO;
@@ -78,22 +80,6 @@ func apply_friction(input_vector,delta):
 
 func call_set_player():
 	get_tree().call_group("enemies", "set_player",self);
-
-func _on_area_2d_area_entered(area):
-	$"../School_Snare".volume_db(-6);
-	$"../School_BDClave".volume_db(-6);
-	$"../School_Bass".volume_db(-6);
-	$"../School_Flute".volume_db(-6);
-	$"../School_Brass".volume_db(-6);
-
-
-func _on_area_2d_area_exited(area):
-	$"../School_Snare".volume_db(-80);
-	$"../School_BDClave".volume_db(-80);
-	$"../School_Bass".volume_db(-80);
-	$"../School_Flute".volume_db(-80);
-	$"../School_Brass".volume_db(-80);
-
 
 func _on_animated_sprite_2d_animation_finished():
 	if sprite.animation == "damage":

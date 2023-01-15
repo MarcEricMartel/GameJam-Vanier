@@ -9,5 +9,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	material.set("fill",clamp(fill, 0.0, 1.0))
+	pass
 	

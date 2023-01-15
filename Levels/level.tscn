@@ -244,3 +244,4 @@ position = Vector2(3658, 4777)
 [connection signal="is_killed" from="Mimic_02" to="." method="_on_mimic_02_is_killed"]
 [connection signal="picked" from="pants" to="." method="_on_pants_picked"]
 [connection signal="is_killed" from="Gym_Enemy05" to="." method="_on_gym_enemy_05_is_killed"]
+

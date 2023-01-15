@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d25c4ey6gvduc"]
+[gd_scene load_steps=4 format=3 uid="uid://d25c4ey6gvduc"]
 
 [ext_resource type="Texture2D" uid="uid://cg848qjc4fxi" path="res://Images/Main_menu.png" id="1_65g7h"]
 [ext_resource type="Script" path="res://start.gd" id="1_exncb"]
+[ext_resource type="Texture2D" uid="uid://drkbrxdk6s40s" path="res://Images/eniv.png" id="3_5j2rv"]
 
 [node name="Start" type="Node2D"]
 script = ExtResource("1_exncb")
@@ -23,14 +24,9 @@ theme_override_colors/font_hover_color = Color(0, 0, 0.65098, 1)
 text = "Start Game"
 flat = true
 
-[node name="Label" type="Label" parent="."]
-offset_left = 1318.0
-offset_top = 109.0
-offset_right = 1728.0
-offset_bottom = 310.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 145
-text = "ENVIE
-"
+[node name="Eniv" type="Sprite2D" parent="."]
+position = Vector2(1632, 266)
+scale = Vector2(4, 4)
+texture = ExtResource("3_5j2rv")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
