@@ -5,10 +5,21 @@ extends Area2D
 @export var LIFETIME = 1.0;
 @export var HANG_TIME = 0.0;
 @export var FRICTION = 0.0;
+@export var SIZE_MOD = 0.0;
 
+@onready var sprite = $Sprite2D;
+
+var rng = RandomNumberGenerator.new();
 var is_hanging = false;
 var velocity = Vector2.ZERO;
 var time = 0.0;
+
+func _ready():
+	var size_mod = rng.randf() * SIZE_MOD;
+	sprite.scale.x -= size_mod;
+	sprite.scale.y -= size_mod;
+	
+	
 
 func _process(delta):
 	
@@ -37,7 +48,8 @@ func end_of_life():
 	is_hanging = true;
 
 func explode():
+	velocity = Vector2.ZERO;
+	sprite.play("explosion");
+
+func _on_sprite_2d_animation_finished():
 	queue_free();
-
-
-

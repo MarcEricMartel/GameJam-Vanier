@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://bc4mkctxjnugk"]
 
 [ext_resource type="PackedScene" uid="uid://cmtuq84761y0i" path="res://Weapons/basic_weapon.tscn" id="1_yfysf"]
-[ext_resource type="Texture2D" uid="uid://dvwb4dx0p0ypw" path="res://Sprites/shoes.png" id="2_oyiyx"]
 [ext_resource type="PackedScene" uid="uid://bedh0enwukdbf" path="res://Projectiles/sand.tscn" id="2_qhdqv"]
+[ext_resource type="Texture2D" uid="uid://byjdk7itcmvms" path="res://Sprites/sablier.png" id="3_w8m6s"]
 
 [node name="hourglass" instance=ExtResource("1_yfysf")]
 position = Vector2(65, -1)
 PROJECTILE = ExtResource("2_qhdqv")
-PROJECTILE_AMOUNT = 200
+PROJECTILE_AMOUNT = 100
 COOLDOWN = 1.0
 SPREAD = 0.5
 RANGE_MOD = 100
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(32, 38)
-scale = Vector2(1.71875, 1.71875)
-texture = ExtResource("2_oyiyx")
+position = Vector2(5, 3.8147e-06)
+rotation = 1.5708
+scale = Vector2(0.684518, 0.684518)
+texture = ExtResource("3_w8m6s")
 
 [node name="RayCast2D" parent="." index="1"]
 position = Vector2(-14, 0)

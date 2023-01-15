@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://degce2jvx3sli"]
 
 [ext_resource type="PackedScene" uid="uid://ci6xls3xseci2" path="res://PickableItems/basic_item.tscn" id="1_c3jw1"]
 [ext_resource type="PackedScene" uid="uid://bc4mkctxjnugk" path="res://Weapons/hourglass.tscn" id="2_f6mwn"]
@@ -9,7 +9,7 @@ Type = "weapon"
 Item = ExtResource("2_f6mwn")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(-0.5, -1)
+position = Vector2(-1, -0.5)
 
 [node name="Sprite2D" parent="." index="1"]
 position = Vector2(18, 22)

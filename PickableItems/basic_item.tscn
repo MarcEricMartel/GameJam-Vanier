@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://PickableItems/basic_item.gd" id="1_txlye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nj5p"]
-size = Vector2(29, 50)
+size = Vector2(20, 17)
 
 [node name="basic_item" type="Area2D"]
 script = ExtResource("1_txlye")
