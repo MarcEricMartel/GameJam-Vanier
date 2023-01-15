@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c58wsmkklb7wq"]
+[gd_scene load_steps=4 format=3 uid="uid://d25c4ey6gvduc"]
 
 [ext_resource type="Texture2D" uid="uid://cg848qjc4fxi" path="res://Images/Main_menu.png" id="1_65g7h"]
 [ext_resource type="Script" path="res://start.gd" id="1_exncb"]
@@ -27,7 +27,7 @@ text = "Start Game"
 flat = true
 
 [node name="Eniv" type="Sprite2D" parent="."]
-position = Vector2(1632, 266)
+position = Vector2(1626.81, 197.172)
 scale = Vector2(4, 4)
 texture = ExtResource("3_5j2rv")
 
