@@ -35,7 +35,7 @@ func _physics_process(delta):
 
 func attack(collider):
 	collider.take_damage(DAMAGE);
-	kill()
+	kill();
 
 func take_damage(damage):
 	HP = HP - damage;
