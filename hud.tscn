@@ -19,6 +19,8 @@ offset_left = 198.0
 offset_top = 205.0
 offset_right = 198.0
 offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_jkk58")
 
 [node name="Bladder" type="Sprite2D" parent="."]
