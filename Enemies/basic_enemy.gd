@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var MAX_SPEED = 300.0;
 @export var ACCELERATION = 1000.0;
 @export var FRICTION = 1500.0;
-@export var HP = 20;
+@export var HP = 100;
 @export var DAMAGE = 34;
 @export var COOLDOWN = 2;
 

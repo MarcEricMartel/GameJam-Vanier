@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc4mkctxjnugk"]
+
+[ext_resource type="PackedScene" uid="uid://cmtuq84761y0i" path="res://Weapons/basic_weapon.tscn" id="1_yfysf"]
+[ext_resource type="Texture2D" uid="uid://dvwb4dx0p0ypw" path="res://Sprites/shoes.png" id="2_oyiyx"]
+[ext_resource type="PackedScene" uid="uid://bedh0enwukdbf" path="res://Projectiles/sand.tscn" id="2_qhdqv"]
+
+[node name="hourglass" instance=ExtResource("1_yfysf")]
+position = Vector2(65, -1)
+PROJECTILE = ExtResource("2_qhdqv")
+PROJECTILE_AMOUNT = 200
+COOLDOWN = 1.0
+SPREAD = 0.5
+RANGE_MOD = 100
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(32, 38)
+scale = Vector2(1.71875, 1.71875)
+texture = ExtResource("2_oyiyx")
+
+[node name="RayCast2D" parent="." index="1"]
+position = Vector2(-14, 0)

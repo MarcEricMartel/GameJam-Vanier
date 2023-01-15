@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci6xls3xseci2"]
+
+[ext_resource type="Texture2D" uid="uid://cjrh8t1n0m2e4" path="res://Sprites/t_shirt.png" id="1_mqcsa"]
+[ext_resource type="Script" path="res://PickableItems/basic_item.gd" id="1_txlye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nj5p"]
+size = Vector2(29, 50)
+
+[node name="basic_item" type="Area2D"]
+script = ExtResource("1_txlye")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_0nj5p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mqcsa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

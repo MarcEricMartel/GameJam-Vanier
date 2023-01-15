@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export var ACCELERATION = 2000.0;
 @export var FRICTION = 3000.0;
 @export var HP = 100;
-@export var STARTING_WEAPON : PackedScene;
 
 @onready var raycast = $RayCast2D;
 var current_weapon = null;
@@ -12,10 +11,6 @@ var weapons = [null,null,null];
 
 func _ready():
 	call_deferred("call_set_player");
-	weapons[0] = STARTING_WEAPON.instantiate();
-	weapons[1] = load("res://Weapons/shotgun.tscn").instantiate();
-	current_weapon = weapons[0];
-	raycast.add_child(current_weapon);
 
 func _physics_process(delta):
 	var input_vector = get_input_vector();
@@ -47,6 +42,14 @@ func take_damage(damage):
 	HP = HP - damage;
 	if HP <= 0:
 		kill();
+
+func pickup(item):
+	if item.Type == "weapon":
+		for n in 3:
+			if !weapons[n]:
+				weapons[n] = item.Item.instantiate();
+				change_weapon(n);
+				return;
 
 func kill():
 	get_tree().reload_current_scene();

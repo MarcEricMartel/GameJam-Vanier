@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://clusfc1udsrt3"]
+
+[ext_resource type="PackedScene" uid="uid://cmtuq84761y0i" path="res://Weapons/basic_weapon.tscn" id="1_fyfpr"]
+[ext_resource type="Texture2D" uid="uid://cjrh8t1n0m2e4" path="res://Sprites/t_shirt.png" id="2_xni8e"]
+
+[node name="t_shirt_cannon" instance=ExtResource("1_fyfpr")]
+position = Vector2(65, 0)
+COOLDOWN = 0.8
+SPREAD = 0.1
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(15, 2.38419e-07)
+rotation = 1.64532
+scale = Vector2(0.929632, 0.929632)
+texture = ExtResource("2_xni8e")
+
+[node name="RayCast2D" parent="." index="1"]
+position = Vector2(2, 0)
+target_position = Vector2(29, 0)

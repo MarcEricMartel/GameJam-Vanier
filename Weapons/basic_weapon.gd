@@ -25,8 +25,10 @@ func fire(wielder_velocity):
 			get_node("/root").add_child(current_projectile);
 		
 			current_projectile.transform = raycast.get_global_transform() ;
-			current_projectile.transform.origin += (get_global_mouse_position() - global_position).normalized() * (rng.randf() * RANGE_MOD);
-			current_projectile.launch((get_global_mouse_position() - global_position).rotated(rng.randf_range(SPREAD,-SPREAD)).normalized(), wielder_velocity);
+			var this_range_mod = rng.randf() * RANGE_MOD;
+			var this_spread_mod = rng.randf_range(SPREAD,-SPREAD);
+			current_projectile.transform.origin += (get_global_mouse_position() - global_position).normalized() * (this_range_mod);
+			current_projectile.launch((get_global_mouse_position() - global_position).rotated(this_spread_mod - this_range_mod / 700).normalized(), wielder_velocity);
 
 
 func _on_cooldown_timer_timeout():

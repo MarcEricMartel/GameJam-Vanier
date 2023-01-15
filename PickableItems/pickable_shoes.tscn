@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" uid="uid://ci6xls3xseci2" path="res://PickableItems/basic_item.tscn" id="1_c3jw1"]
+[ext_resource type="PackedScene" uid="uid://bc4mkctxjnugk" path="res://Weapons/hourglass.tscn" id="2_f6mwn"]
+[ext_resource type="Texture2D" uid="uid://dvwb4dx0p0ypw" path="res://Sprites/shoes.png" id="3_bsb8q"]
+
+[node name="shoes" instance=ExtResource("1_c3jw1")]
+Type = "weapon"
+Item = ExtResource("2_f6mwn")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-0.5, -1)
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(18, 22)
+texture = ExtResource("3_bsb8q")

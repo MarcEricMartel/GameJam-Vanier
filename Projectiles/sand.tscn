@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bedh0enwukdbf"]
+
+[ext_resource type="PackedScene" uid="uid://cpo8qy3y0fuui" path="res://Projectiles/basic_projectile.tscn" id="1_mqpki"]
+
+[node name="basic_projectile" instance=ExtResource("1_mqpki")]
+DAMAGE = 1
+SPEED = 1000
+LIFETIME = 0.1
+HANG_TIME = 0.3
+FRICTION = 0.92
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(2.43502, 2.43502)

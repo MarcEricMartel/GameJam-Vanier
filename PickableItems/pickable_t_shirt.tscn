@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbg5x0apue0ei"]
+
+[ext_resource type="PackedScene" uid="uid://ci6xls3xseci2" path="res://PickableItems/basic_item.tscn" id="1_a7gul"]
+[ext_resource type="PackedScene" uid="uid://clusfc1udsrt3" path="res://Weapons/t_shirt_cannon.tscn" id="2_8v7ss"]
+
+[node name="pickable_t_shirt" instance=ExtResource("1_a7gul")]
+Type = "weapon"
+Item = ExtResource("2_8v7ss")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(1, 0.5)
