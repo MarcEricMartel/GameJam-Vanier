@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1ek3aw31vio2"]
+[gd_scene load_steps=3 format=3 uid="uid://bi5h65wa7574p"]
 
 [ext_resource type="Script" path="res://GameOver.gd" id="1_2w7nc"]
 [ext_resource type="Texture2D" uid="uid://cyodm2ixiok7d" path="res://Images/Game_Over.png" id="2_guyua"]
 
 [node name="GameOver" type="Node2D"]
+position = Vector2(20, 0)
+scale = Vector2(0.522579, 0.493457)
 script = ExtResource("1_2w7nc")
 
 [node name="ColorRect" type="ColorRect" parent="."]
