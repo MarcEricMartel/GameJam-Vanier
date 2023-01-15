@@ -7,6 +7,7 @@ extends CharacterBody2D
 
 @onready var raycast = $RayCast2D;
 @onready var sprite = $AnimatedSprite2D;
+@onready var bladderUI = $Bladder;
 
 var animation_count = 0;
 
@@ -47,7 +48,7 @@ func take_damage(damage):
 	if sprite.animation != "damage":
 		HP = HP - damage;
 		sprite.play("damage");
-		$Bladder.material.set("fill",clamp((100.0 - HP) / 100.0, 0.0, 1.0));
+		bladderUI.material.set("fill",clamp((100.0 - HP) / 100.0, 0.0, 1.0));
 		if HP <= 0:
 			kill();
 
