@@ -140,6 +140,4 @@ position = Vector2(2367, 1350)
 [node name="shoes" parent="." instance=ExtResource("8_qnb3g")]
 position = Vector2(2595, 969)
 
-[connection signal="picked" from="pickable_t_shirt" to="." method="_on_pickable_t_shirt_picked"]
 [connection signal="is_killed" from="Outside_Enemy" to="." method="_on_outside_enemy_is_killed"]
-[connection signal="picked" from="shoes" to="." method="_on_shoes_picked"]

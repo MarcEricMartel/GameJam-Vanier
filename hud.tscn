@@ -23,11 +23,10 @@ script = ExtResource("1_jkk58")
 
 [node name="Bladder" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_0gcor")
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 texture = ExtResource("2_fa8jy")
 script = ExtResource("3_tb31y")
 
 [node name="BladderHollow" type="Sprite2D" parent="."]
-position = Vector2(-2, 0)
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 texture = ExtResource("4_lbxgy")
