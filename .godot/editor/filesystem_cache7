@@ -1,10 +1,10 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1673747350
+::res://::1673754772
 README.md::TextFile::-1::1673744149::0::1::::<><>::
-test_level001.tscn::PackedScene::278447013021769396::1673747296::0::1::::<><>::uid://xev8p1td1icx<>uid://d3y4rna66nylu<>uid://c661br4lh30r8
-::res://Enemies/::1673747296
-basic_enemy.gd::GDScript::-1::1673746722::0::1::::<>CharacterBody2D<>::
-basic_enemy.tscn::PackedScene::7014272596353446583::1673747296::0::1::::<><>::res://Enemies/basic_enemy.gd<>uid://ds4uvvrcxoay1
+test_level001.tscn::PackedScene::278447013021769396::1673754607::0::1::::<><>::uid://xev8p1td1icx<>uid://d3y4rna66nylu<>uid://c661br4lh30r8
+::res://Enemies/::1673754607
+basic_enemy.gd::GDScript::-1::1673753048::0::1::::<>CharacterBody2D<>::
+basic_enemy.tscn::PackedScene::7014272596353446583::1673754607::0::1::::<><>::res://Enemies/basic_enemy.gd<>uid://ds4uvvrcxoay1
 ::res://Levels/::1673744149
 level.tscn::PackedScene::4739050375457527030::1673744149::0::1::::<><>::
 ::res://Music/::1673744196
@@ -13,13 +13,12 @@ School_BDClave.ogg::AudioStreamOggVorbis::2352609159460477887::1673744149::16737
 School_Brass.ogg::AudioStreamOggVorbis::8423202159412100063::1673744149::1673744196::1::::<><>::
 School_Flute.ogg::AudioStreamOggVorbis::6100788483817358773::1673744149::1673744196::1::::<><>::
 School_Snare.ogg::AudioStreamOggVorbis::6764331197145035365::1673744149::1673744196::1::::<><>::
-::res://Player/::1673747350
-player.gd::GDScript::-1::1673746568::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1623935731621421531::1673747296::0::1::::<><>::res://Player/player.gd<>uid://wkeakqjvu3gg
-::res://Player/Weapons/::1673744149
-basic_weapon.tscn::PackedScene::5655575360493827386::1673744149::0::1::::<><>::
-::res://Projectiles/::1673744149
-basic_projectile.tscn::PackedScene::5856608848916302392::1673744149::0::1::::<><>::
+::res://Player/::1673754607
+player.gd::GDScript::-1::1673753856::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::1623935731621421531::1673754607::0::1::::<><>::res://Player/player.gd<>uid://cmtuq84761y0i<>uid://wkeakqjvu3gg
+::res://Projectiles/::1673754624
+basic_projectile.gd::GDScript::-1::1673754606::0::1::::<>Area2D<>::
+basic_projectile.tscn::PackedScene::5856608848916302392::1673754624::0::1::::<><>::res://Projectiles/basic_projectile.gd<>uid://gqotbni355f
 ::res://Sprites/::1673744680
 placeholder_enemy.png::CompressedTexture2D::8483781162333137450::1673744660::1673744680::1::::<><>::
 placeholder_player.png::CompressedTexture2D::1565041755936548690::1673744149::1673744500::1::::<><>::
@@ -27,3 +26,6 @@ placeholder_projectile.png::CompressedTexture2D::13383739614235193::1673744149::
 placeholder_weapon.png::CompressedTexture2D::7577871081029115281::1673744149::1673744508::1::::<><>::
 ::res://TileSets/::1673744149
 Tiles Set GameJam.png::CompressedTexture2D::9175886574582270754::1673744149::1673744149::1::::<><>::
+::res://Weapons/::1673754607
+basic_weapon.gd::GDScript::-1::1673754590::0::1::::<>Node2D<>::
+basic_weapon.tscn::PackedScene::5655575360493827386::1673754607::0::1::::<><>::res://Weapons/basic_weapon.gd<>uid://df71outtqfcu0<>uid://cpo8qy3y0fuui

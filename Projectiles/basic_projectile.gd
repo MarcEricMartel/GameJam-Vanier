@@ -18,3 +18,8 @@ func launch(direction):
 
 func _on_life_timer_timeout():
 	queue_free();
+
+
+func _on_body_entered(body):
+	if body.is_in_group("enemies"):
+		body.take_damage(DAMAGE);
