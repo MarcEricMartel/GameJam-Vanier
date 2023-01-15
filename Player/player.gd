@@ -36,7 +36,8 @@ func change_weapon(position):
 		raycast.add_child(current_weapon);
 
 func attack():
-	if current_weapon: current_weapon.fire(velocity);
+	if current_weapon: 
+		current_weapon.fire(velocity);
 
 func take_damage(damage):
 	HP = HP - damage;
