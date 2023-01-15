@@ -50,13 +50,13 @@ default_color = Color(1, 0, 0, 0.392157)
 
 [node name="Bladder" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_g8k2d")
-position = Vector2(-847, -443)
+position = Vector2(-427, -197)
 scale = Vector2(2, 2)
 texture = ExtResource("5_pcbeg")
 script = ExtResource("6_8x3rf")
 
 [node name="BladderHollow" type="Sprite2D" parent="."]
-position = Vector2(-847, -443)
+position = Vector2(-427, -197)
 scale = Vector2(2, 2)
 texture = ExtResource("3_nm4h4")
 

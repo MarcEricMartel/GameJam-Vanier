@@ -6,8 +6,8 @@
 
 [node name="pillow" instance=ExtResource("1_4irix")]
 PROJECTILE = ExtResource("2_ym5xc")
-COOLDOWN = 0.1
-SPREAD = 0.5
+COOLDOWN = 0.05
+SPREAD = 0.25
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(59, 19)
